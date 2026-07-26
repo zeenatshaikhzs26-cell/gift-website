@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customize</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>Customize {{ product.name }}</h2>
+
+    <form method="POST">
+        <label>Your Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Message:</label><br>
+        <input type="text" name="message" required><br><br>
+
+        <button type="submit">Add to Cart</button>
+    </form>
+</body>
+</html>
