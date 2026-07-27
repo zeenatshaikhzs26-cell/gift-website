@@ -93,4 +93,12 @@ body {
 
 .order-box h2 {
     color: #ff4d6d;
+    .form-container textarea {
+    height: 80px;
+}
+
+.form-container input,
+.form-container textarea {
+    font-size: 14px;
+}
 }
