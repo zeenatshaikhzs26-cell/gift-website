@@ -90,8 +90,14 @@ def cart():
 
 
 # ---------------- ORDER PAGE ----------------
-@app.route('/order')
+@app.route('/order', methods=['GET', 'POST'])
 def order():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        product = request.form.get('product')
+
+        return render_template('order.html', name=name, product=product)
+
     return render_template('order.html')
 
 
