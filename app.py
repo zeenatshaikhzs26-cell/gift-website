@@ -89,10 +89,24 @@ def order():
     if request.method == 'POST':
         name = request.form.get('name', 'Customer')
         product = request.form.get('product', 'your gift')
+        mobile = request.form.get('mobile', 'Not provided')
+        address = request.form.get('address', 'Not provided')
 
-        return render_template('order.html', name=name, product=product)
+        return render_template(
+            'order.html',
+            name=name,
+            product=product,
+            mobile=mobile,
+            address=address
+        )
 
-    return render_template('order.html', name="Customer", product="your gift")
+    return render_template(
+        'order.html',
+        name="Customer",
+        product="your gift",
+        mobile="",
+        address=""
+    )
 
 
 # ---------------- RUN APP ----------------
