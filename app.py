@@ -21,7 +21,7 @@ def products():
           "name": "Personalized Photo Magazine",
           "price": "₹1500",
           "image": "https://i.pinimg.com/1200x/34/6c/89/346c896935db88c10de250fe2a8763c0.jpg"
-        }
+        },
         {
             "name": "Chocolate Bouquet",
             "price": "₹699",
