@@ -2,32 +2,34 @@
 <html>
 <head>
     <title>Shop - The Gifting Edit</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
-<!-- NAVBAR -->
+<!-- Navbar -->
 <div class="navbar">
     <h2>The Gifting Edit 🎁</h2>
     <a href="/">Home</a>
+    <a href="/products">Shop</a>
 </div>
 
-<h2 style="text-align:center; color:#ff4081;">✨ Our Products ✨</h2>
+<h1 class="heading">Shop Our Collection 💝</h1>
 
-<div class="container">
+<!-- Product Grid -->
+<div class="products-container">
 
-{% for product in products %}
-    <div class="card">
-        <img src="{{ product.image }}" alt="gift">
+    {% for product in products %}
+    <div class="product-card">
+
+        <img src="{{ product.image }}" class="product-img">
 
         <h3>{{ product.name }}</h3>
-        <p class="price">₹ {{ product.price }}</p>
 
-        <a href="{{ url_for('customize') }}">Customize</a>
-            Customize
-        </a>
+        <p class="price">₹{{ product.price }}</p>
+
     </div>
-{% endfor %}
+    {% endfor %}
 
 </div>
 
