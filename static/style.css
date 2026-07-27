@@ -37,8 +37,8 @@ body {
 .products-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    padding: 40px;
+    gap: 20px;
+    padding: 30px;
 }
 
 .product-card {
