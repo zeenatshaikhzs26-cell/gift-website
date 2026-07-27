@@ -65,3 +65,32 @@ body {
     color: #ff4d6d;
     font-weight: bold;
 }
+/* FORM PAGE */
+.form-container {
+    width: 350px;
+    margin: 60px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+/* ORDER PAGE */
+.order-box {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.order-box h2 {
+    color: #ff4d6d;
+}
