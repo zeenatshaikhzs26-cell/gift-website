@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -13,14 +13,14 @@ def home():
 def products():
     gift_items = [
         {
-            "name": "Hair Clutcher Bouquet ",
+            "name": "Hair Clutcher Bouquet",
             "price": "₹999",
             "image": "https://i.pinimg.com/736x/ff/64/d6/ff64d664b72b73a5d882983ffde95b4f.jpg"
         },
         {
-          "name": "Personalized Photo Magazine",
-          "price": "₹1500",
-          "image": "https://i.pinimg.com/1200x/34/6c/89/346c896935db88c10de250fe2a8763c0.jpg"
+            "name": "Personalized Photo Magazine",
+            "price": "₹1500",
+            "image": "https://i.pinimg.com/1200x/34/6c/89/346c896935db88c10de250fe2a8763c0.jpg"
         },
         {
             "name": "Chocolate Bouquet",
@@ -83,22 +83,16 @@ def customize():
     return render_template('customize.html')
 
 
-# ---------------- CART PAGE ----------------
-@app.route('/cart')
-def cart():
-    return render_template('cart.html')
-
-
 # ---------------- ORDER PAGE ----------------
 @app.route('/order', methods=['GET', 'POST'])
 def order():
     if request.method == 'POST':
-        name = request.form.get('name')
-        product = request.form.get('product')
+        name = request.form.get('name', 'Customer')
+        product = request.form.get('product', 'your gift')
 
         return render_template('order.html', name=name, product=product)
 
-    return render_template('order.html')
+    return render_template('order.html', name="Customer", product="your gift")
 
 
 # ---------------- RUN APP ----------------
