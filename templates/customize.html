@@ -1,52 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Customize - The Gifting Edit</title>
+    <title>Customize Your Gift</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
-<!-- Navbar -->
-<div class="navbar">
-    <h2>The Gifting Edit 🎁</h2>
-    <a href="/">Home</a>
-    <a href="/products">Shop</a>
-    <a href="/customize">Customize</a>
-</div>
+<div class="form-container">
 
-<!-- Heading -->
-<h1 class="heading">Create Your Own Gift 🎀</h1>
+    <h2>Customize Your Gift 🎁</h2>
 
-<!-- Form Section -->
-<div class="customize-container">
+    <form action="{{ url_for('order') }}" method="POST">
 
-    <form class="custom-form">
+        <input type="text" name="name" placeholder="Your Name" required>
 
-        <label>Choose Gift Type</label>
-        <select>
-            <option>Chocolate Bouquet 🍫</option>
-            <option>Hair Clutcher Bouquet 🎀</option>
-            <option>DIY Gift Box 🎁</option>
-            <option>Custom Bracelet 💎</option>
-            <option>Crochet Bouquet 🌸</option>
-        </select>
+        <input type="text" name="product" placeholder="Product Name" required>
 
-        <label>Enter Name / Text for Customization</label>
-        <input type="text" placeholder="Enter name or message">
+        <textarea name="message" placeholder="Custom Message"></textarea>
 
-        <label>Choose Theme</label>
-        <select>
-            <option>Birthday 🎂</option>
-            <option>Anniversary ❤️</option>
-            <option>Festive ✨</option>
-            <option>Minimal Aesthetic 🤍</option>
-        </select>
+        <input type="text" name="photo_link" placeholder="Paste Photo Link (for personalization)">
 
-        <label>Additional Instructions</label>
-        <textarea placeholder="Write your customization details..."></textarea>
-
-        <button type="submit">Place Custom Order 💝</button>
+        <button type="submit" class="btn">Place Order</button>
 
     </form>
 
