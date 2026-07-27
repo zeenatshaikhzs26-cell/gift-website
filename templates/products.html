@@ -11,17 +11,22 @@
 
 <div class="products-container">
 
-    {% for product in products %}
-    <div class="product-card">
+   {% for product in products %}
+<div class="product-card">
 
-        <img src="{{ product.image }}" class="product-img">
+    <img src="{{ product.image }}" class="product-img">
 
-        <h3>{{ product.name }}</h3>
+    <h3>{{ product.name }}</h3>
 
-        <p class="price">{{ product.price }}</p>
+    <p class="price">{{ product.price }}</p>
 
+    <div class="btn-group">
+        <a href="{{ url_for('customize') }}" class="btn small-btn">Customize</a>
+        <a href="{{ url_for('cart') }}" class="btn small-btn">Add to Cart</a>
     </div>
-    {% endfor %}
+
+</div>
+{% endfor %}
 
 </div>
 
