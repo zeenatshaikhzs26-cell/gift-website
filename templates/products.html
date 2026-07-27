@@ -23,7 +23,7 @@
         <h3>{{ product.name }}</h3>
         <p class="price">₹ {{ product.price }}</p>
 
-        <a href="/customize/{{ product.id }}" class="btn">
+        <a href="{{ url_for('customize') }}">Customize</a>
             Customize
         </a>
     </div>
