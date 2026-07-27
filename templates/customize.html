@@ -11,19 +11,25 @@
 
     <h2>Customize Your Gift 🎁</h2>
 
-    <form action="{{ url_for('order') }}" method="POST">
+   <form action="{{ url_for('order') }}" method="POST">
 
-        <input type="text" name="name" placeholder="Your Name" required>
+    <input type="text" name="name" placeholder="Your Name" required>
 
-        <input type="text" name="product" placeholder="Product Name" required>
+    <input type="text" name="product" placeholder="Product Name" required>
 
-        <textarea name="message" placeholder="Custom Message"></textarea>
+    <!-- ✅ NEW MOBILE FIELD -->
+    <input type="tel" name="mobile" placeholder="Mobile Number" required>
 
-        <input type="text" name="photo_link" placeholder="Paste Photo Link (for personalization)">
+    <!-- ✅ NEW ADDRESS FIELD -->
+    <textarea name="address" placeholder="Enter your delivery address" required></textarea>
 
-        <button type="submit" class="btn">Place Order</button>
+    <textarea name="message" placeholder="Custom Message (optional)"></textarea>
 
-    </form>
+    <input type="text" name="photo_link" placeholder="Paste Photo Link (optional)">
+
+    <button type="submit" class="btn">Place Order</button>
+
+</form>
 
 </div>
 
