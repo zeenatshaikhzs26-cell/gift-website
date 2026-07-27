@@ -13,7 +13,7 @@ def home():
 def products():
     gift_items = [
         {
-            "name": "Hair Clutcher Set",
+            "name": "Hair Clutcher Bouquet ",
             "price": "₹299",
             "image": "https://i.pinimg.com/736x/ff/64/d6/ff64d664b72b73a5d882983ffde95b4f.jpg"
         },
